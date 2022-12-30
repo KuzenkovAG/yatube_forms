@@ -113,10 +113,16 @@ def post_create(request):
             )
             new.save()
             return redirect(f'/profile/{user.username}/')
-        return render(request, 'posts/create_post.html', {'form': form, 'title': title})
+        return render(request, 'posts/create_post.html', {
+            'form': form,
+            'title': title
+        })
 
     form = PostForm()
-    return render(request, 'posts/create_post.html', {'form': form, 'title': title})
+    return render(request, 'posts/create_post.html', {
+        'form': form,
+        'title': title
+    })
 
 
 @owner_only
