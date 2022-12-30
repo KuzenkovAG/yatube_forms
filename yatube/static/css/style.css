@@ -1,0 +1,48 @@
+/*----------------------------*\
+	Header
+\*----------------------------*/
+
+header {
+    background-color: #87cefa;
+}
+
+/*----------------------------*\
+	        Body
+\*----------------------------*/
+
+
+.pagination {
+    margin: auto;
+}
+
+
+/*----------------------------*\
+	        About
+\*----------------------------*/
+
+#about-form {
+    background-image: url(../img/fon-author.jpg) repeat-y;
+}
+
+#img-author {
+    height: 30vh;
+    width: auto;
+}
+
+.figure-caption {
+    text-align: center;
+}
+
+#about-header h1 {
+    margin: 40px;
+    text-align: center;
+}
+
+#about-text {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%
+}
+
+
+

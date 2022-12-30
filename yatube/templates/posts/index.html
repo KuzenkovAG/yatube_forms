@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container py-5">
+    {% for post in page_obj %}
+      {% include 'includes/print_post.html' %}
+    {% endfor %}
+    {% include 'includes/paginator.html' %}
+  </div>
+{% endblock %}
