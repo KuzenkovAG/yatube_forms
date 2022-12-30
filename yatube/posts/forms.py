@@ -3,7 +3,7 @@ from .models import Post
 
 
 class PostForm(forms.ModelForm):
-    """Form for create/edit post"""
+    """Form for create/edit post."""
     class Meta:
         model = Post
         fields = ('text', 'group')
