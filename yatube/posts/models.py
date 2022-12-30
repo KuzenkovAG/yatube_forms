@@ -5,7 +5,7 @@ User = get_user_model()
 
 
 class Group(models.Model):
-    """Group of post"""
+    """Group of post."""
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
@@ -15,7 +15,7 @@ class Group(models.Model):
 
 
 class Post(models.Model):
-    """Post which user create"""
+    """Post which user create."""
     text = models.TextField(
         verbose_name='Текст поста',
         help_text="Текст нового поста"

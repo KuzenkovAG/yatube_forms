@@ -3,7 +3,7 @@ from .models import Group, Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    """Detail admin side for manage of user posts"""
+    """Detail admin side for manage of user posts."""
     list_display = ('pk', 'text', 'pub_date', 'author', 'group')
     search_fields = ('text',)
     list_filter = ('pub_date',)

@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class PostsConfig(AppConfig):
-    """App for creating and view post"""
+    """App for creating and view post."""
     name = 'posts'
