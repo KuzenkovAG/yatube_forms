@@ -111,7 +111,7 @@ def post_edit(request, post_id):
     template = 'posts/create_post.html'
 
     if request.method == 'POST':
-        if form.is_valid():
+        if form.is_validgit():
             post.save()
             return redirect(reverse_lazy('posts:post_detail', args=[post_id]))
         return render(request, template, {
