@@ -1,22 +1,22 @@
 {% load user_filters %}
 {% if form.errors %}
-  {% for field in form %}
-    {% for error in field.errors %}
-      <div class="alert alert-danger">
-        {{ error|escape }}
-      </div>
-    {% endfor %}
-  {% endfor %}
-  {% for error in form.non_field_errors %}
-    <div class="alert alert-danger">
-      {{ error|escape }}
-    </div>
-  {% endfor %}
+{% for field in form %}
+{% for error in field.errors %}
+<div class="alert alert-danger">
+  {{ error|escape }}
+</div>
+{% endfor %}
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div class="alert alert-danger">
+  {{ error|escape }}
+</div>
+{% endfor %}
 {% endif %}
 
 <form method="post"
       {% if action_url %}
-        action="{% url action_url %}"
+      action="{% url action_url %}"
       {% endif %}
 >
   {% csrf_token %}
@@ -31,14 +31,14 @@
     <label for="{{ field.id_for_label }}">
       {{ field.label }}
       {% if field.field.required %}
-        <span class="required text-danger">*</span>
+      <span class="required text-danger">*</span>
       {% endif %}
     </label>
     {{ field|addclass:'form-control' }}
     {% if field.help_text %}
-      <small id="{{ field.id_for_label }}-help" class="form-text">
-        {{ field.help_text|safe }}
-      </small>
+    <small id="{{ field.id_for_label }}-help" class="form-text">
+      {{ field.help_text|safe }}
+    </small>
     {% endif %}
   </div>
   {% endfor %}
@@ -54,10 +54,10 @@
       {% include 'includes/button_name.html' %}
     </button>
     {% if request.resolver_match.view_name == 'users:login' %}
-      <a href="{% url 'users:password_reset' %}"
-        class="btn btn-link">
-        Забыли пароль?
-      </a>
-    {% endif %}
+    <a href="{% url 'users:password_reset' %}"
+       class="btn btn-link">
+      Забыли пароль?
+    </a>
+    {% endif %} 
   </div>
 </form>

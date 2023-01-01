@@ -3,10 +3,10 @@
   <div class="container">
     <a class="navbar-brand" href="{% url 'posts:index' %}">
       <img src="{% static 'img/logo.png' %}" width="30" height="30"
-        class="d-inline-block align-top" alt="">
+           class="d-inline-block align-top" alt="">
       <span style="color:red">Ya</span>tube
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -19,7 +19,7 @@
             {% if view_name == 'about:author' %}
               active
             {% endif %}"
-            href="{% url 'about:author' %}"
+             href="{% url 'about:author' %}"
           >
             Об авторе
           </a>
@@ -88,6 +88,5 @@
         {% endwith %}
       </ul>
     </div>
-
   </div>
 </nav>
