@@ -97,7 +97,6 @@ def post_create(request):
                 'posts:profile',
                 args=[user.username]
             ))
-        return render(request, template, {'form': form, 'title': title})
     return render(request, template, {'form': form, 'title': title})
 
 
@@ -105,7 +104,7 @@ def post_create(request):
 def post_edit(request, post_id):
     """Page of edit post."""
     title = 'Редактировать пост'
-    is_edit = True
+
     post = get_object_or_404(Post, id=post_id)
     form = PostForm(request.POST or None, instance=post)
     template = 'posts/create_post.html'
@@ -114,13 +113,8 @@ def post_edit(request, post_id):
         if form.is_valid():
             post.save()
             return redirect(reverse_lazy('posts:post_detail', args=[post_id]))
-        return render(request, template, {
-            'form': form,
-            'title': title,
-            'is_edit': is_edit,
-        })
     return render(request, template, {
         'form': form,
         'title': title,
-        'is_edit': is_edit,
+        'is_edit': True,
     })
