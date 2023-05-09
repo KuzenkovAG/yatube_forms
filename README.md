@@ -33,7 +33,7 @@ python -m venv venv
 ```
 Activate environment
 ```sh
-source venv/Script/activate
+source venv/Scripts/activate
 ```
 Install requirements
 ```sh
